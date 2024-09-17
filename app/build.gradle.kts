@@ -27,3 +27,7 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+tasks.getByName("run", JavaExec::class) { //  в эталонном проекте мы не читаем ничего из консоли, соответственно нам не нужно задавать поток ввода. А здесь нужно получить ввод пользователя....
+    standardInput = System.`in`
+}
