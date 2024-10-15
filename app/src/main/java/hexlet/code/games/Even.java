@@ -1,9 +1,9 @@
-package hexlet.code;
+package hexlet.code.games;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class EvenGame {
+public class Even {
     private static final int ROUNDS = 3;
 
     public static void start() {
