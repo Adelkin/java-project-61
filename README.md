@@ -6,3 +6,6 @@
 [![asciicast](https://asciinema.org/a/0lKYgieIiKM2uzSFr3ozNAHai.svg)](https://asciinema.org/a/0lKYgieIiKM2uzSFr3ozNAHai)
 #### Demo of Calc Game
 [![asciicast](https://asciinema.org/a/sbLH9qAFRj6llwBBdar35LKQ5.svg)](https://asciinema.org/a/sbLH9qAFRj6llwBBdar35LKQ5)
+#### Demo of GCD Game
+[![asciicast](https://asciinema.org/a/pbskxGBye0GOXhIQd3NATzUhF.svg)](https://asciinema.org/a/pbskxGBye0GOXhIQd3NATzUhF)
+

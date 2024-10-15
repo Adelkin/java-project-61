@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
 
 import java.util.Scanner;
 
@@ -15,6 +16,7 @@ public class App {
             System.out.println("1 - Greet");
             System.out.println("2 - Even");
             System.out.println("3 - Calc");
+            System.out.println("4 - GCD");
             System.out.println("0 - Exit");
 
             System.out.print("Your choice: ");
@@ -22,22 +24,25 @@ public class App {
 
             switch (choice) {
                 case 1:
-                    Cli.greet(); // Приветствие
+                    Cli.greet();
                     break;
                 case 2:
-                    Even.start(); // Игра "Проверка на четность"
+                    Even.start();
                     break;
                 case 3:
-                    Calc.start(); // Игра "Калькулятор"
+                    Calc.start();
+                    break;
+                case 4:
+                    GCD.start();
                     break;
                 case 0:
-                    System.out.println("Goodbye!"); // Завершение программы
+                    System.out.println("Goodbye!");
                     break;
                 default:
-                    System.out.println("Invalid choice."); // Обработка неверного выбора
+                    System.out.println("Invalid choice.");
                     break;
             }
 
-        } while (choice != 0); // Цикл будет продолжаться, пока не введено "0"
+        } while (choice != 0);
     }
 }
