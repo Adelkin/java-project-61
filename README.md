@@ -8,4 +8,6 @@
 [![asciicast](https://asciinema.org/a/sbLH9qAFRj6llwBBdar35LKQ5.svg)](https://asciinema.org/a/sbLH9qAFRj6llwBBdar35LKQ5)
 #### Demo of GCD Game
 [![asciicast](https://asciinema.org/a/pbskxGBye0GOXhIQd3NATzUhF.svg)](https://asciinema.org/a/pbskxGBye0GOXhIQd3NATzUhF)
+#### Demo of Progression Game
+[![asciicast](https://asciinema.org/a/SP30PGQZhlTZFjHSOxxXQkOo4.svg)](https://asciinema.org/a/SP30PGQZhlTZFjHSOxxXQkOo4)
 
