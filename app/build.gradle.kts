@@ -4,7 +4,7 @@ plugins {
     jacoco
     id("checkstyle")
     id("io.freefair.lombok") version "8.6"
-    id("com.github.ben-manes.versions") version "0.50.0"
+    id("com.github.ben-manes.versions") version "0.49.0"
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
@@ -28,6 +28,6 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.getByName("run", JavaExec::class) { //  в эталонном проекте мы не читаем ничего из консоли, соответственно нам не нужно задавать поток ввода. А здесь нужно получить ввод пользователя....
+tasks.getByName("run", JavaExec::class) {
     standardInput = System.`in`
 }
