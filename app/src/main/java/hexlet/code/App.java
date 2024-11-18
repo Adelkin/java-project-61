@@ -29,7 +29,7 @@ public class App {
             switch (choice) {
                 case 1:
                     Cli.greet();
-                    break;
+                    return;
                 case 2:
                     Even.start();
                     break;
