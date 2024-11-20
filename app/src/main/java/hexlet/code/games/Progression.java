@@ -1,8 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Random;
+import hexlet.code.Utils;
 
 public class Progression {
     private static final int MIN_START = 1;
@@ -24,32 +23,29 @@ public class Progression {
     }
 
     private static String[] generateRoundData() {
-        Random random = new Random();
+        int length = Utils.getRandomNumber(MIN_LENGTH, MAX_LENGTH);
+        int start = Utils.getRandomNumber(MIN_START, MAX_START);
+        int step = Utils.getRandomNumber(MIN_STEP, MAX_STEP);
 
-        int length = MIN_LENGTH + random.nextInt(MAX_LENGTH - MIN_LENGTH + 1);
-        int start = MIN_START + random.nextInt(MAX_START);
-        int step = MIN_STEP + random.nextInt(MAX_STEP);
+        int[] progression = generateProgression(start, step, length);
+        int hiddenIndex = Utils.getRandomNumber(0, length - 1);
 
-        int[] progression = new int[length];
-        for (int i = 0; i < length; i++) {
-            progression[i] = start + i * step;
-        }
-
-        int hiddenIndex = random.nextInt(length);
         String correctAnswer = String.valueOf(progression[hiddenIndex]);
-
-
         progression[hiddenIndex] = -1;
 
         StringBuilder question = new StringBuilder();
         for (int number : progression) {
-            if (number == -1) {
-                question.append(".. ");
-            } else {
-                question.append(number).append(" ");
-            }
+            question.append(number == -1 ? ".. " : number + " ");
         }
 
         return new String[]{question.toString().trim(), correctAnswer};
+    }
+
+    private static int[] generateProgression(int start, int step, int length) {
+        int[] progression = new int[length];
+        for (int i = 0; i < length; i++) {
+            progression[i] = start + i * step;
+        }
+        return progression;
     }
 }

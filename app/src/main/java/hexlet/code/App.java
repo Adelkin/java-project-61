@@ -20,43 +20,29 @@ public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Please enter the game number and press Enter.");
-        System.out.println(GREET + " - Greet");
-        System.out.println(EVEN + " - Even");
-        System.out.println(CALC + " - Calc");
-        System.out.println(GCDGAME + " - GCD");
-        System.out.println(PROGRESSION + " - Progression");
-        System.out.println(PRIME + " - Prime");
-        System.out.println(EXIT + " - Exit");
+        System.out.println("""
+                Please enter the game number and press Enter.
+                1 - Greet
+                2 - Even
+                3 - Calc
+                4 - GCD
+                5 - Progression
+                6 - Prime
+                0 - Exit
+                """);
 
         System.out.print("Your choice: ");
         int choice = scanner.nextInt();
 
         switch (choice) {
-            case GREET:
-                Cli.greet();
-                break;
-            case EVEN:
-                Even.start();
-                break;
-            case CALC:
-                Calc.start();
-                break;
-            case GCDGAME:
-                GCD.start();
-                break;
-            case PROGRESSION:
-                Progression.start();
-                break;
-            case PRIME:
-                Prime.start();
-                break;
-            case EXIT:
-                System.out.println("Goodbye!");
-                break;
-            default:
-                System.out.println("Invalid choice. Exiting...");
-                break;
+            case GREET -> Cli.greet();
+            case EVEN -> Even.start();
+            case CALC -> Calc.start();
+            case GCDGAME -> GCD.start();
+            case PROGRESSION -> Progression.start();
+            case PRIME -> Prime.start();
+            case EXIT -> System.out.println("Goodbye!");
+            default -> System.out.println("Invalid choice. Exiting...");
         }
 
         scanner.close();
